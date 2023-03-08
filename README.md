@@ -3,6 +3,23 @@
 # riot-password-changer
 <i>Automatically change Riot account passwords using Selenium
 </i>
+
+![Alt Text](https://i.imgur.com/2jRwnec.mp4)
 </div>
 
-TODO: Add content to readme if you happen to be reading now just run main.py and translate the instructions.
+# Overview
+
+This is an automatic Riot Games account password changer using these technologies,
+- undetected-chromedriver
+- python3
+- selenium
+
+The projects instructions are in Bosnian however it is very easy to use the tool,
+
+1. Put your accounts seperated with a newline in accounts.txt in the format `name:password`.
+2. Ensure you have an internet connection and atleast Python 3.9 installed.
+2. Run `POKRENI_ME.bat` if you're on Windows otherwise install `requirements.txt` yourself
+3. Run the `main.py` script via `py main.py` or `python main.py` for unix systems
+
+⭐ Stars are apprecitiated!
+
