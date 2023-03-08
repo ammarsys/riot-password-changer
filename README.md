@@ -4,6 +4,10 @@
 <i>Automatically change Riot account passwords using Selenium
 </i>
 
+[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
 ![Alt Text](https://i.imgur.com/2jRwnec.mp4)
 </div>
 
