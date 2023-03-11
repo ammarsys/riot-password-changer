@@ -8,7 +8,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
-![Alt Text](https://i.imgur.com/2jRwnec.mp4)
+![Alt Text](https://cdn.discordapp.com/attachments/995797406404857977/1083164624704249876/cli-first-gig.gif)
 </div>
 
 # Overview
