@@ -7,6 +7,7 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import TimeoutException
+from selenium.webdriver.chrome.options import Options
 
 
 import selenium.webdriver.support.expected_conditions as EC
@@ -40,7 +41,8 @@ def change_account_password(
     )
 
     # Driver initialization
-    driver = uc.Chrome()
+
+    driver = uc.Chrome(version_main=109)
     driver.maximize_window()
     driver.get("https://account.riotgames.com/en/log-in/")  # direct sign-in/log-in page
 
