@@ -60,13 +60,12 @@ with open("accounts.txt", "r+") as file:
         if creds == data[-1]:
             break
 
-        print(
-            colored("[INFO]", "#808080"), "10 second delay, soon starting again\n"
-        )
+        print(colored("[INFO]", "#808080"), "10 second delay, soon starting again\n")
         time.sleep(10)
 
 print()
 print(
-    colored("[INFO]", "#808080"), "Program finished. See the new account data in new_accounts.txt"
+    colored("[INFO]", "#808080"),
+    "Program finished. See the new account data in new_accounts.txt",
 )
 os.system("pause")
