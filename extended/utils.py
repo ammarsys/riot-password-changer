@@ -1,13 +1,9 @@
 import time
 import random
-import string
 
 from selenium.webdriver.support.wait import WebDriverWait
-from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import TimeoutException
-from selenium.webdriver.chrome.options import Options
 
 
 import selenium.webdriver.support.expected_conditions as EC
