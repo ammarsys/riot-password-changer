@@ -8,21 +8,21 @@ from terminalcolorpy import colored
 os.system("")
 input(
     rf"""
-Program radi i koristi selenium tehnologiju s specijalnim Chrome webdriverom koji je undetected za vrijeme ovog pisanja
-{colored("02/01/2023", "blue")}.
+In the file {colored("accounts.txt", "blue")} enter all your accounts in the following format,
 
-U fajlu {colored("accounts.txt", "blue")} unesi sve accounte u formatu:
+name:password
 
-IME:SIFRA
+for example,
 
-primjer,
+myRiotName:verysecurepassword454!!
+ValorantEnjoyer:kkkkk33!!
 
-Mojeime:mojasifra!53
-Mojeime12:mojasifra!43
-Mojeime53:mojasifra!554
-Mojeime23:mojasifra!v
+You can also specify a second ":" which indicates your desired password. This means that the program will not generate
+a random password but rather, it'll use the one you give it. For example,
 
-Novi fajl {colored("new_accounts.txt", "blue")} ce bit napravljen s novim siframa. Klikni ENTER da program pocne.
+myRiotName:verysecurepass:thisismynewpassword!!
+
+A new file {colored("new_accounts.txt", "blue")} will be created & updated as the program goes. Click ENTER to start the program.
 """
 )
 os.system("cls")
@@ -34,20 +34,23 @@ with open("accounts.txt", "r+") as file:
     for creds in data:
         try:
             username, password = creds
+            new_password = gen_sec_pass()
         except ValueError:
-            print(
-                colored("[ERROR]", "red"),
-                "Pogresno ime ili sifra uneseno u accounts.txt! Preskacem ovaj account",
-            )
-            continue
+            try:
+                username, password, new_password = creds
+            except ValueError:
+                print(
+                    colored("[ERROR]", "red"),
+                    "Fault account data for this account in accounts.txt! Skipping...",
+                )
+                continue
 
-        new_password = gen_sec_pass()
         try:
             change_account_password(username, password, new_password, sleep_time=2)
         except ValueError:
             print(
                 colored("[ERROR]", "red"),
-                "Pogresni podaci za login! Preskacem ovaj account",
+                "Faulty login data! Skipping...",
             )
             continue
 
@@ -58,12 +61,12 @@ with open("accounts.txt", "r+") as file:
             break
 
         print(
-            colored("[INFO]", "#808080"), "Delay od 10 sekundi, uskoro krecem ponovo\n"
+            colored("[INFO]", "#808080"), "10 second delay, soon starting again\n"
         )
         time.sleep(10)
 
 print()
 print(
-    colored("[INFO]", "#808080"), "Program zavrsen. Novi nalogi su u new_accounts.txt"
+    colored("[INFO]", "#808080"), "Program finished. See the new account data in new_accounts.txt"
 )
 os.system("pause")
