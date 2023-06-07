@@ -42,7 +42,7 @@ def change_account_password(
 
     # Driver initialization
 
-    driver = uc.Chrome(version_main=109)
+    driver = uc.Chrome()
     driver.maximize_window()
     driver.get("https://account.riotgames.com/en/log-in/")  # direct sign-in/log-in page
 
