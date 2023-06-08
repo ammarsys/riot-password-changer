@@ -42,7 +42,7 @@ So, essentially:
 
 1. Put your accounts seperated with a newline in accounts.txt in the format `name:password`.
 2. Ensure you have an internet connection and atleast Python 3.9 installed.
-2. Run `RUN_ME.bat` if you're on Windows otherwise install `requirements.txt` yourself via `py -m pip install -r requirements.txt`
+2. Run `RUN_ME.bat` if you're on Windows otherwise install `requirements.txt` yourself via `py -m pip install -U -r requirements.txt`
 3. Run the `main.py` script via `py main.py` or `python main.py` for unix systems
 
 ⭐ Stars are apprecitiated!
