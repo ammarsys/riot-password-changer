@@ -23,6 +23,9 @@ a random password but rather, it'll use the one you give it. For example,
 myRiotName:verysecurepass:thisismynewpassword!!
 
 A new file {colored("new_accounts.txt", "blue")} will be created & updated as the program goes. Click ENTER to start the program.
+
+Please note that the process is fully autonomous for accounts without a verified email, that is ones that do not require 
+2FA entry.
 """
 )
 os.system("cls")
