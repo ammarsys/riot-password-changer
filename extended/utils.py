@@ -51,7 +51,7 @@ def change_account_password(
 
     # Driver initialization
     # We initialize a new driver each time because of safety and the fact that this program is a batch login process
-    driver = uc.Chrome()
+    driver = uc.Chrome(version_main=114)
     driver.maximize_window()
     driver.get("https://account.riotgames.com/en/log-in/")  # direct sign-in/log-in page
 
