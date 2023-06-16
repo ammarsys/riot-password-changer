@@ -66,7 +66,9 @@ def change_account_password(
 
     driver.find_element(By.XPATH, SIGN_IN_INPUT_FIELD_FOR_NAME_XPATH,).send_keys(username)
     driver.find_element(By.XPATH, SIGN_IN_INPUT_FIELD_FOR_PASSWORD_XPATH).send_keys(initial_password)
-    driver.find_element(By.XPATH, SIGN_IN_PAGE_LOGIN_BUTTON).click()
+
+    lg_bt = driver.find_element(By.XPATH, SIGN_IN_PAGE_LOGIN_BUTTON)
+    driver.execute_script("arguments[0].click();", lg_bt)
 
     try:
         driver.find_element(By.XPATH, TWOFA_REQUIRED_XPATH)
@@ -95,7 +97,9 @@ def change_account_password(
     driver.find_element(By.XPATH, INITIAL_PASSWORD_FIELD_XPATH).send_keys(initial_password)
     driver.find_element(By.XPATH, NEW_PASSWORD_FIELD_XPATH).send_keys(new_password)
     driver.find_element(By.XPATH, CONFIRM_PASSWORD_FIELD_XPATH).send_keys(new_password)
-    driver.find_element(By.XPATH, CHANGE_PASSWORD_BUTTON).click()
+
+    cpb = driver.find_element(By.XPATH, CHANGE_PASSWORD_BUTTON)
+    driver.execute_script("arguments[0].click();", cpb)
 
     print(colored("[INFO]", "#808080"), "Process finished.")
     time.sleep(10 + sleep_time)  # let the HTTP request (hopefully) go through

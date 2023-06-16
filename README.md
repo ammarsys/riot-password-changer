@@ -47,6 +47,12 @@ So, essentially:
 
 ⭐ Stars are apprecitiated!
 
+## Mismatched versions issue
+
+There seems to be a bug where `undetected_chromedriver` fails to update the Google Chrome binary, resulting in mismatched versions error. 
+In the projects file structure, you'll find a `DELETE_OLD_BINARY.py` file and by running it, Python will automatically find the old binary 
+in your Windows AppData and delete it. Upon running the script, a fresh, *matched* version driver will be installed on your system.
+
 ## Contributing
 
 Please look at the issues for any feature requests. 
